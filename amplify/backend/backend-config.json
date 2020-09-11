@@ -1,0 +1,27 @@
+{
+    "auth": {
+        "journalf8897257": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [
+                {
+                    "category": "function",
+                    "resourceName": "journalf8897257PreSignup",
+                    "triggerProvider": "Cognito",
+                    "attributes": [
+                        "Arn",
+                        "Name"
+                    ]
+                }
+            ],
+            "customAuth": false
+        }
+    },
+    "function": {
+        "journalf8897257PreSignup": {
+            "build": true,
+            "providerPlugin": "awscloudformation",
+            "service": "Lambda"
+        }
+    }
+}

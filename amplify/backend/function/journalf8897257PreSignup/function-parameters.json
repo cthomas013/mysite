@@ -1,0 +1,16 @@
+{
+  "trigger": true,
+  "modules": [
+    "email-filter-whitelist"
+  ],
+  "parentResource": "journalf8897257",
+  "functionName": "journalf8897257PreSignup",
+  "resourceName": "journalf8897257PreSignup",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "/Users/corythomas/.nvm/versions/node/v14.9.0/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/utils/../triggers/PreSignup",
+  "triggerTemplate": "PreSignup.json.ejs",
+  "roleName": "journalf8897257PreSignup",
+  "skipEdit": true,
+  "DOMAINWHITELIST": "gmail.com"
+}

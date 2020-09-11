@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Amplify from 'aws-amplify';
+import aws_exports from './aws-exports';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import store, { AmplifyBridge } from './store';
+
+import { Navigator, Main } from './components';
+import './App.css';
+import '@aws-amplify/ui/dist/style.css';
+
+Amplify.configure(aws_exports)
+new AmplifyBridge(store)
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Navigator />
+        <Main />
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
